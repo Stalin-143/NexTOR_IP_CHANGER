@@ -72,6 +72,10 @@
 
 ### Enjoy enhanced privacy and dynamic IP rotation!
 
+## Image
+
+
+
 ## License:
 
 This project is open source and distributed under the MIT License. Contributions are welcome!
