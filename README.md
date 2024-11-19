@@ -71,8 +71,9 @@
   Open your browser and configure the SOCKS proxy to 127.0.0.1:9050.
 
 ### Enjoy enhanced privacy and dynamic IP rotation!
+
 ## License:
 
 This project is open source and distributed under the MIT License. Contributions are welcome!
 
-Feel free to add this updated README.md file to your GitHub repository!
+
