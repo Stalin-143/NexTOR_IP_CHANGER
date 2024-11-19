@@ -72,7 +72,16 @@
 
 ### Enjoy enhanced privacy and dynamic IP rotation!
 
-## Image
+## Image:
+
+## After Running
+
+![Screenshot_2024-11-20_00_42_09](https://github.com/user-attachments/assets/4a18015f-4910-493e-9f3a-0fd8fbf31b2e)
+
+## RESULT
+
+![Screenshot_2024-11-20_00_17_27](https://github.com/user-attachments/assets/308df2a7-9a58-4b4e-a04d-0042d9fa7819)
+
 
 
 
