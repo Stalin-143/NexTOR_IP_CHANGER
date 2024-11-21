@@ -85,9 +85,12 @@
 
 
 
-## License:
+## License
 
-This project is open source and distributed under the MIT License. Contributions are welcome!
+
+  
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
  ## Disclaimer
 
