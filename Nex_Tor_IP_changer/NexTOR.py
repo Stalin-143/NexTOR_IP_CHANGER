@@ -44,11 +44,11 @@ print('''\033[1;32;40m \n
                           \___ \| __/ _` | '_ \ / _` |
                            ___) | || (_| | | | | (_| |
                           |____/ \__\__,_|_| |_|\__,_|
-                1.0                    
+                1.1                    
 
 ''')
 print("\033[1;40;31m https:github.com/Stalin-143\n")
-print("Nexulen")
+print("Nexulean")
 
 os.system("service tor start")
 
