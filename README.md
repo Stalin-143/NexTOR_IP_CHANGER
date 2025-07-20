@@ -1,110 +1,146 @@
-# Nex_Tor_IP_Changer v1.0
+# NexTor IP Changer v1.1
 
-### Automatically Change Your IP Address Using the Tor Network
+🕵️‍♂️ **Automatically Change Your IP Address Using the Tor Network**
 
-#### This tool leverages the Tor project to periodically change your IP address. It is ideal for privacy enthusiasts or anyone requiring dynamic IP rotation.
-## Features:
+NexTor IP Changer is a lightweight, command-line tool designed to enhance online privacy by leveraging the Tor network to periodically rotate your IP address. This tool is perfect for privacy enthusiasts, security researchers, or anyone requiring dynamic IP rotation for legitimate purposes, such as testing network configurations or maintaining anonymity.
 
-  Automatically changes IP address via the Tor network.
-  Simple installation and usage.
-  Designed for Linux systems.
+🚀 **Features**
 
-## Installation Instructions:
+- **Automated IP Rotation**: Seamlessly changes your IP address using the Tor network at user-defined intervals.
+- **Simple Command-Line Interface**: Run the tool with a single command (`nextor`) and follow intuitive prompts.
+- **Lightweight and Efficient**: Minimal resource usage, optimized for Arch Linux systems.
+- **Flexible Configuration**: Set custom time intervals and the number of IP changes, including an option for infinite rotation.
+- **Application Integration**: Works with any application or browser that supports SOCKS proxy settings.
+- **Arch Linux Support**: Available in the Arch User Repository (AUR) for easy installation.
 
-## Requirements:
+🛠️ **Installation (Arch Linux Only)**
 
-  Install Tor:
+📦 **Requirements**
 
-    sudo apt install tor
+Before using NexTor IP Changer, ensure the following dependencies are installed and configured:
 
-## Install required Python libraries:
+1. **Tor**: The tool relies on the Tor network for IP rotation.
+   ```bash
+   sudo pacman -S tor
+   sudo systemctl enable --now tor
+   ```
 
-    pip3 install requests[socks]
+2. **Python Libraries**: The `requests[socks]` library is required for proxy communication.
+   ```bash
+   pip3 install requests[socks]
+   ```
 
-  Alternatively, running the NexTor script will handle dependencies automatically.
+🔧 **Verify Tor is Running**
 
-## Steps:
+Ensure the Tor service is active before running the tool:
+```bash
+sudo systemctl status tor
+```
+If Tor is not running, start it with:
+```bash
+sudo systemctl start tor
+```
 
-  ### Clone the repository:
+📦 **Install from AUR**
 
-    git clone https://github.com/Stalin-143/NexTOR_IP_CHANGER
+The easiest way to install NexTor IP Changer is through the Arch User Repository (AUR) using an AUR helper like `yay`:
+```bash
+yay -S nextor-ip-changer
+```
 
-## Navigate to the project directory:
+This installs the tool system-wide, allowing you to run it with the `nextor` command:
+```bash
+nextor
+```
 
-    cd Nex_Tor_IP_changer
+📦 **Install from Source**
 
-## Run the installation script:
+For users who prefer manual installation or want to customize the tool:
 
-    python3 install.py
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Stalin-143/NexTOR_IP_CHANGER
+   ```
 
-### After installation, you can use the command Nex from any terminal to start the tool.
+2. Navigate to the project directory:
+   ```bash
+   cd NexTOR_IP_CHANGER
+   ```
 
-## Usage:
+3. Run the installation script:
+   ```bash
+   python3 install.py
+   ```
 
-  ### Run the command:
+After installation, the `nextor` command will be available globally.
 
-    Nex
-    
-## Follow the prompts:
+🧪 **Usage**
 
-  Enter the time interval (in seconds) for IP changes.
-  Specify the number of IP changes (or set to infinite by entering 0).
+Launch the tool by running:
+```bash
+nextor
+```
 
-  Set your browser or application to use the SOCKS proxy at 127.0.0.1:9050.
+The tool will prompt you to:
+- **Enter the time interval** (in seconds) between IP changes (e.g., `60` for every minute).
+- **Specify the number of IP changes** (e.g., `10` for ten rotations, or `0` for infinite changes).
 
-## Notes:
+🔌 **Proxy Configuration**
 
-  The tool works on systems with Tor properly installed and running.
-  Configure your application or browser to use the proxy settings for IP rotation:
-      SOCKS Proxy: 127.0.0.1
-      Port: 9050
-  For infinite IP changes, enter 0 when prompted.
+To route your traffic through the Tor network and benefit from IP rotation, configure your application or browser to use the following SOCKS proxy settings:
+- **Host**: `127.0.0.1`
+- **Port**: `9050`
 
-## Example:
+For example, in Firefox:
+1. Go to **Settings > General > Network Settings**.
+2. Select **Manual proxy configuration**.
+3. Set **SOCKS Host** to `127.0.0.1` and **Port** to `9050`.
+4. Enable **SOCKS v5** and save.
 
-  Launch the tool:
+This ensures your traffic is routed through Tor with rotating IPs as configured by the tool.
 
-    Nex
+🔔 **Notes**
 
-  Set time to change IP (e.g., every 60 seconds).
-  Set the number of changes (e.g., 10 or 0 for infinite changes).
-  Open your browser and configure the SOCKS proxy to 127.0.0.1:9050.
+- **Verify Tor Status**: Always confirm that the Tor service is running before using the tool (`sudo systemctl status tor`).
+- **Infinite Rotation**: Enter `0` when prompted for the number of changes to enable continuous IP rotation.
+- **Arch Linux Optimization**: The tool is specifically packaged for Arch Linux via the AUR, ensuring seamless integration.
+- **Proxy Settings**: Incorrect proxy configurations in your application or browser may prevent IP rotation. Double-check the settings if issues arise.
+- **Performance**: The tool is designed to be lightweight, but frequent IP changes may impact network performance depending on your connection.
 
-### Enjoy enhanced privacy and dynamic IP rotation!
+🌟 **Contributing**
 
-## Image:
+We welcome contributions from the community to improve NexTor IP Changer! Here’s how you can get involved:
 
-## After Running
+- **Bug Reports**: Found a bug? Open an issue on the [GitHub Issues page](https://github.com/Stalin-143/NexTOR_IP_CHANGER/issues) with a detailed description, including steps to reproduce and your system details.
+- **Feature Requests**: Have an idea for a new feature? Submit a feature request via GitHub Issues, explaining how it would enhance the tool.
+- **Pull Requests**: Want to contribute code? Follow these steps:
+  1. Fork the repository.
+  2. Create a new branch (`git checkout -b feature/your-feature-name`).
+  3. Make your changes and commit them with clear messages (`git commit -m "Add your feature description"`).
+  4. Push to your fork (`git push origin feature/your-feature-name`).
+  5. Open a pull request on the [GitHub repository](https://github.com/Stalin-143/NexTOR_IP_CHANGER).
+- **Code Style**: Follow Python PEP 8 guidelines for code contributions. Ensure your code is well-documented and includes appropriate comments.
+- **Testing**: Test your changes thoroughly on an Arch Linux system with Tor installed to ensure compatibility.
 
-![Screenshot_2024-11-20_00_42_09](https://github.com/user-attachments/assets/4a18015f-4910-493e-9f3a-0fd8fbf31b2e)
+📄 **License**
 
-## after update 1.1 it show NexTor Instend on Stana
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## RESULT
+⚠️ **Disclaimer**
 
-![Screenshot_2024-11-20_00_17_27](https://github.com/user-attachments/assets/308df2a7-9a58-4b4e-a04d-0042d9fa7819)
+This script is provided "as is" without any warranties or guarantees. The author is not responsible for any misuse or unintended consequences that may arise from using this script. Please use it responsibly and in compliance with your local laws and network policies.
 
+💰 **Support the Project**
 
+If you find NexTor IP Changer useful, consider supporting its development:  
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/stalin143)  
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/stalinS143)
 
+📬 **Contact**
 
-## License
-
-
-  
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
- ## Disclaimer
-
-It's often good to include a disclaimer, especially for security-related tools, clarifying that the script should be used responsibly and that the author is not liable for any misuse.
+For questions, feedback, or support, reach out via the [GitHub Issues page](https://github.com/Stalin-143/NexTOR_IP_CHANGER/issues). You can also connect with the community through discussions on the repository.
 
 
-
-    This script is provided "as-is" without any warranties or guarantees. The author is not responsible for any misuse or unintended consequences that may arise from using this script. Please use it responsibly and in compliance with your local laws and network policies.
-
-
- ## 💰 You can help me by Donating
-  [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/stalin143) [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/stalinS143) 
 
   
 
