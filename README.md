@@ -1,4 +1,4 @@
-# NexTor IP Changer v1.1
+# NexTor IP Changer v1.0
 
 🕵️‍♂️ **Automatically Change Your IP Address Using the Tor Network**
 
