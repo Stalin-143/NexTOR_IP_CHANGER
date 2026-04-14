@@ -23,8 +23,8 @@ debian-branch = debian
 # Merge upstream changes
 merge = True
 
-# Use pristine-tar
-pristine-tar = True
+# Use pristine-tar (disabled for initial setup)
+pristine-tar = False
 
 [export-dir]
 # Export location
