@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=nextor
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_python3:
+	dh_python3 --shebang=/usr/bin/python3
+
+override_dh_installdocs:
+	dh_installdocs
+	dh_installdocs README.md
+
+override_dh_auto_install:
+	dh_auto_install
+	# Create nextor wrapper script in /usr/bin
+	$(MAKE) -B --directory=debian install-wrapper
+
+install-wrapper:
+	mkdir -p debian/nextor/usr/bin
+	echo '#!/usr/bin/python3' > debian/nextor/usr/bin/nextor
+	echo 'from Nex_Tor_IP_changer.NexTOR import main' >> debian/nextor/usr/bin/nextor
+	echo 'if __name__ == "__main__":' >> debian/nextor/usr/bin/nextor
+	echo '    main()' >> debian/nextor/usr/bin/nextor
+	chmod +x debian/nextor/usr/bin/nextor

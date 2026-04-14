@@ -1,0 +1,224 @@
+.TH NEXTOR 1 "April 2026" "nextor 1.1" "NexTor IP Changer"
+
+.SH NAME
+nextor \- Tor exit node IP address rotator
+
+.SH SYNOPSIS
+.B nextor
+
+.SH DESCRIPTION
+.B nextor
+is a command-line tool that automatically rotates your IP address using the Tor
+network. It provides seamless, periodic IP rotation with minimal resource usage,
+making it ideal for privacy enthusiasts, security researchers, and penetration
+testers.
+
+.SH FEATURES
+.TP
+.B Automated IP Rotation
+Request new Tor exit nodes at configurable intervals to change your public IP address.
+
+.TP
+.B Simple Interface
+Interactive command-line prompts guide you through configuration and operation.
+
+.TP
+.B Flexible Configuration
+Set custom rotation intervals in seconds and specify the number of rotations
+or enable infinite rotation mode.
+
+.TP
+.B SOCKS5 Proxy Integration
+Works with any application or browser that supports SOCKS proxy settings.
+
+.TP
+.B Lightweight
+Minimal resource usage, optimized for low-end systems and VPS environments.
+
+.SH REQUIREMENTS
+.TP
+.B Tor
+The Tor daemon must be installed and running on your system.
+
+.TP
+.B Python3
+Python 3.6 or later with the following packages:
+.RS
+.TP
+.B requests[socks]
+For making HTTP requests through SOCKS5 proxy.
+
+.TP
+.B stem
+For communicating with Tor daemon.
+.RE
+
+.SH INSTALLATION
+Install the package via the Debian package manager:
+.RS
+.B apt install nextor
+.RE
+
+This will automatically install all required dependencies.
+
+.SH USAGE
+Start the interactive tool by running:
+.RS
+.B nextor
+.RE
+
+The tool will prompt you to:
+.TP
+1.
+Specify the time interval (in seconds) between IP rotations.
+
+.TP
+2.
+Enter the number of IP changes or select infinite mode.
+
+.TP
+3.
+Confirm to start the IP rotation process.
+
+Once started, the tool will:
+.TP
+\(bu
+Rotate your Tor exit node at specified intervals.
+
+.TP
+\(bu
+Display your current public IP address after each rotation.
+
+.TP
+\(bu
+Show a countdown timer and rotation progress.
+
+.SH EXAMPLES
+Start NexTor with default interactive prompts:
+.RS
+.B nextor
+.RE
+
+.SH PROXY CONFIGURATION
+After starting NexTor, configure your applications to use the SOCKS5 proxy at:
+.RS
+.B socks5://127.0.0.1:9050
+.RE
+
+Common applications:
+.TP
+.B Firefox
+: Preferences > Network Settings > Manual proxy configuration > SOCKS Host
+
+.TP
+.B Chromium/Chrome
+: Settings > Advanced > Proxy > Manual proxy configuration > SOCKS5
+
+.TP
+.B Command-line tools
+: Use the
+.B http_proxy
+and
+.B https_proxy
+environment variables or tool-specific proxy settings.
+
+.SH REQUIREMENTS FOR TOR
+Ensure the Tor service is running:
+.RS
+.B sudo systemctl start tor
+.RE
+
+Enable Tor to start on boot:
+.RS
+.B sudo systemctl enable tor
+.RE
+
+Check Tor status:
+.RS
+.B sudo systemctl status tor
+.RE
+
+.SH SECURITY NOTES
+.TP
+\(bu
+This tool is intended for ethical security testing, OSINT research, privacy
+protection, and network testing only.
+
+.TP
+\(bu
+Users must comply with all applicable laws and the terms of service of
+websites and services they access through this tool.
+
+.TP
+\(bu
+Do not use this tool for illegal activities such as sending spam, accessing
+unauthorized systems, or bypassing legitimate security measures.
+
+.TP
+\(bu
+Tor protects your anonymity but does not guarantee security. Use with caution
+on shared networks and take additional security precautions when needed.
+
+.TP
+\(bu
+Some websites may block or throttle Tor exit node IP addresses.
+
+.SH FILES
+.TP
+.B /usr/bin/nextor
+The main executable script.
+
+.SH ENVIRONMENT
+.TP
+.B TOR_CONTROLPORT
+Default: 9051 (Tor control port)
+
+.TP
+.B TOR_SOCKSPORT
+Default: 9050 (Tor SOCKS5 port)
+
+.SH TROUBLESHOOTING
+.TP
+.B Tor connection error
+Ensure Tor is installed and running:
+.RS
+.B sudo systemctl start tor
+.RE
+
+.TP
+.B "Permission denied" errors
+Some Tor control port operations may require elevated privileges. Run with sudo:
+.RS
+.B sudo nextor
+.RE
+
+.TP
+.B IP not rotating
+Verify Tor authentication is properly configured. Try restarting Tor:
+.RS
+.B sudo systemctl restart tor
+.RE
+
+.TP
+.B Slow IP changes
+Tor exit node rotation may take several seconds. This is normal behavior.
+
+.SH SEE ALSO
+.BR tor (1),
+.BR torsocks (1),
+.BR curl (1)
+
+.SH AUTHOR
+Stalin <stalin@example.com>
+
+.SH HOMEPAGE
+https://github.com/Stalin-143/NexTOR_IP_CHANGER
+
+.SH LICENSE
+This program is licensed under the MIT License. See the LICENSE file in the
+source repository for details.
+
+.SH DISCLAIMER
+This tool is provided "as is" without warranty. Users are responsible for
+complying with all applicable laws and regulations in their jurisdiction.
+The authors are not responsible for any misuse or damage caused by this tool.

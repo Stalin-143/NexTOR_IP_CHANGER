@@ -1,0 +1,47 @@
+Source: nextor
+Maintainer: Stalin <stalin@example.com>
+Section: utils
+Priority: optional
+Standards-Version: 4.6.1
+Homepage: https://github.com/Stalin-143/NexTOR_IP_CHANGER
+Vcs-Git: https://github.com/Stalin-143/NexTOR_IP_CHANGER.git
+Vcs-Browser: https://github.com/Stalin-143/NexTOR_IP_CHANGER
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-setuptools,
+               python3-all
+Rules-Requires-Root: no
+
+Package: nextor
+Architecture: all
+Depends: ${python3:Depends},
+         ${misc:Depends},
+         python3,
+         python3-requests,
+         python3-stem,
+         tor
+Recommends: python3-pip,
+            curl,
+            wget
+Conflicts: nextor-ip-changer
+Replaces: nextor-ip-changer
+Provides: nextor-ip-changer
+Description: Tor exit node IP address rotator for privacy and security testing
+ NexTor IP Changer is a command-line tool designed to automatically rotate
+ your IP address using the Tor network. It provides seamless, periodic IP
+ rotation with minimal resource usage, making it ideal for privacy
+ enthusiasts, security researchers, and penetration testers.
+ .
+ Key features:
+ .
+  * Automated IP rotation via Tor network
+  * Simple command-line interface
+  * Configurable rotation intervals
+  * Support for infinite rotation mode
+  * Lightweight and efficient design
+  * SOCKS5 proxy integration
+  * Cross-platform compatibility
+ .
+ This tool is intended for ethical security testing, OSINT research, privacy
+ protection, and network testing. Users must comply with applicable laws and
+ terms of service when using this tool.

@@ -1,0 +1,16 @@
+nextor (1.1-1) unstable; urgency=medium
+
+  * Initial Debian package release
+  * Automated Tor exit node rotation
+  * Command-line interface for IP rotation
+  * Support for configurable rotation intervals
+  * SOCKS5 proxy integration
+  * Lightweight and efficient design
+
+ -- Stalin <stalin@example.com>  Mon, 14 Apr 2026 00:00:00 +0000
+
+nextor (1.0-1) UNRELEASED; urgency=low
+
+  * Initial release
+
+ -- Stalin <stalin@example.com>  Mon, 14 Apr 2026 00:00:00 +0000
