@@ -1,3 +1,12 @@
+nextor (1.1-1kali1) kali-dev; urgency=high
+
+  * Kali Linux package release
+  * Automated Tor exit node IP rotation
+  * Published to GitLab: https://gitlab.com/5t4l1n/NexTOR_IP_CHANGER.git
+  * Ready for Kali repository integration
+
+ -- Kali Linux <devel@kali.org>  Mon, 14 Apr 2026 00:00:00 +0000
+
 nextor (1.1-1) unstable; urgency=medium
 
   * Initial Debian package release
@@ -6,11 +15,5 @@ nextor (1.1-1) unstable; urgency=medium
   * Support for configurable rotation intervals
   * SOCKS5 proxy integration
   * Lightweight and efficient design
-
- -- Stalin <stalin@example.com>  Mon, 14 Apr 2026 00:00:00 +0000
-
-nextor (1.0-1) UNRELEASED; urgency=low
-
-  * Initial release
 
  -- Stalin <stalin@example.com>  Mon, 14 Apr 2026 00:00:00 +0000

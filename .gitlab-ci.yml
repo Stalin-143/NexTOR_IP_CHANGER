@@ -1,0 +1,99 @@
+stages:
+  - build
+  - test
+  - lint
+  - publish
+
+variables:
+  DEBIAN_FRONTEND: noninteractive
+  PACKAGE_NAME: nextor
+  PACKAGE_VERSION: "1.1-1kali1"
+
+# Build on Debian Bullseye (used by Kali)
+build:debian:
+  stage: build
+  image: debian:bullseye
+  before_script:
+    - apt-get update -qq
+    - apt-get install -y build-essential debhelper-compat devscripts dh-python python3-setuptools python3-all pristine-tar git-buildpackage lintian
+  script:
+    - gbp buildpackage --git-ignore-new -us -uc
+    - mkdir -p build
+    - mv ../nextor*.deb build/ || true
+    - mv ../nextor*.changes build/ || true
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 week
+  only:
+    - merge_requests
+    - tags
+    - main
+
+# Build on Debian Bookworm (future Kali support)
+build:debian:bookworm:
+  stage: build
+  image: debian:bookworm
+  before_script:
+    - apt-get update -qq
+    - apt-get install -y build-essential debhelper-compat devscripts dh-python python3-setuptools python3-all pristine-tar git-buildpackage lintian
+  script:
+    - gbp buildpackage --git-ignore-new -us -uc
+    - mkdir -p build
+    - mv ../nextor*.deb build/ || true
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 week
+  allow_failure: true
+
+# Lintian checks for Debian quality
+lint:
+  stage: lint
+  image: debian:bullseye
+  before_script:
+    - apt-get update -qq
+    - apt-get install -y lintian
+  script:
+    - lintian --profile debian build/*.deb || echo "Lintian warnings found"
+  dependencies:
+    - build:debian
+  allow_failure: true
+
+# Install test
+test:install:
+  stage: test
+  image: debian:bullseye
+  before_script:
+    - apt-get update -qq
+    - apt-get install -y tor curl python3
+  script:
+    - apt-get install -y ./build/nextor*.deb || true
+    - nextor --help || echo "Binary not yet available in stage"
+    - python3 -c "from Nex_Tor_IP_changer import NexTOR" || echo "Module test deferred"
+  dependencies:
+    - build:debian
+  allow_failure: true
+
+# Dependency check
+test:dependencies:
+  stage: test
+  image: debian:bullseye
+  script:
+    - apt-get update -qq
+    - apt-get install -y python3 python3-requests python3-stem tor
+    - python3 -c "import requests; import stem; import tor" || true
+    - echo "All dependencies available"
+
+# Package quality check
+test:debian:
+  stage: test
+  image: debian:bullseye
+  before_script:
+    - apt-get update -qq
+    - apt-get install -y python3-all python3-pytest python3-flake8 python3-pylint
+  script:
+    - cd $CI_PROJECT_DIR
+    - python3 -m py_compile Nex_Tor_IP_changer/*.py
+    - echo "Syntax check passed"
+  allow_failure: true

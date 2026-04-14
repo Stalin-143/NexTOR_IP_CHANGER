@@ -1,0 +1,50 @@
+# git-buildpackage configuration for NexTOR
+# https://manpages.debian.org/gbp.conf
+
+[buildpackage]
+# Sign packages with GPG
+sign-tags = True
+sign-commits = False
+
+# Use .orig.tar.xz format
+compression = xz
+compression-level = 9
+
+# Don't rebuild locally
+no-create-orig = False
+
+# Upstream branch
+upstream-branch = master
+
+# Debian branch
+debian-branch = debian
+
+[import-orig]
+# Merge upstream changes
+merge = True
+
+# Use pristine-tar
+pristine-tar = True
+
+[export-dir]
+# Export location
+dir = ../build-area/
+
+[pq]
+# Patch queue branch
+pq-branch = patch-queue/%(branch)s
+
+[clone]
+# Clone depth for CI
+depth = 0
+
+[push]
+# Push tags to origin
+tag-only = False
+
+[dch]
+# Maintainer for changelog
+maintainer = Kali Linux <devel@kali.org>
+
+# Update changelog automatically
+auto = True

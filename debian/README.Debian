@@ -1,0 +1,82 @@
+NexTOR IP Changer for Debian/Kali Linux
+=========================================
+
+INSTALLATION
+============
+
+apt-get install nextor
+
+
+USAGE
+=====
+
+Basic usage:
+  nextor
+
+Start/stop Tor service:
+  sudo systemctl start tor
+  sudo systemctl stop tor
+  sudo systemctl status tor
+
+Check current exit IP:
+  nextor
+
+
+CONFIGURATION
+=============
+
+Tor is configured via /etc/tor/torrc
+
+To modify Tor settings:
+  sudo nano /etc/tor/torrc
+  sudo systemctl restart tor
+
+
+DOCUMENTATION
+==============
+
+Man page:
+  man nextor
+
+Online docs:
+  https://github.com/Stalin-143/NexTOR_IP_CHANGER
+
+
+DEPENDENCIES
+============
+
+- Python 3.6+
+- python3-requests (SOCKS support)
+- python3-stem (Tor control)
+- tor service
+
+
+UPSTREAM
+========
+
+Homepage: https://github.com/Stalin-143/NexTOR_IP_CHANGER
+GitLab: https://gitlab.com/5t4l1n/NexTOR_IP_CHANGER.git
+
+
+TROUBLESHOOTING
+===============
+
+If tor service won't start:
+  sudo systemctl restart tor
+  sudo journalctl -xe
+
+If IP isn't changing:
+  - Verify tor is running: systemctl status tor
+  - Check tor service logs: sudo tail -f /var/log/syslog
+  - Ensure SOCKS5 proxy is reachable on port 9050
+
+
+SECURITY NOTES
+==============
+
+- This tool is for security testing and privacy purposes
+- Always verify local laws regarding proxy usage
+- Use responsibly and ethically
+- Never use for illegal activities
+
+ -- Kali Linux <devel@kali.org>  Mon, 14 Apr 2026 00:00:00 +0000
