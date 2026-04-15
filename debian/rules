@@ -18,9 +18,6 @@ override_dh_auto_test:
 override_dh_auto_install:
 	dh_auto_install
 	# Create nextor wrapper script in /usr/bin
-	$(MAKE) -B --directory=debian install-wrapper
-
-install-wrapper:
 	mkdir -p debian/nextor/usr/bin
 	echo '#!/usr/bin/python3' > debian/nextor/usr/bin/nextor
 	echo 'from Nex_Tor_IP_changer.NexTOR import main' >> debian/nextor/usr/bin/nextor

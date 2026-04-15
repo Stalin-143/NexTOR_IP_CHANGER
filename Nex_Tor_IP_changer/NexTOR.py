@@ -75,7 +75,7 @@ def main():
     os.system("clear")
     
     # Print banner
-    print('''\033[1;32;40m \n
+    print(r'''
                          _   _           _____          
                         | \ | | _____  _|_   _|__  _ __ 
                         |  \| |/ _ \ \/ / | |/ _ \| '__|
