@@ -14,13 +14,3 @@ override_dh_installdocs:
 
 override_dh_auto_test:
 	# Skip tests during build - no test suite available
-
-override_dh_auto_install:
-	dh_auto_install
-	# Create nextor wrapper script in /usr/bin
-	mkdir -p debian/nextor/usr/bin
-	echo '#!/usr/bin/python3' > debian/nextor/usr/bin/nextor
-	echo 'from Nex_Tor_IP_changer.NexTOR import main' >> debian/nextor/usr/bin/nextor
-	echo 'if __name__ == "__main__":' >> debian/nextor/usr/bin/nextor
-	echo '    main()' >> debian/nextor/usr/bin/nextor
-	chmod +x debian/nextor/usr/bin/nextor
