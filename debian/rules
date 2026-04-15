@@ -14,3 +14,8 @@ override_dh_installdocs:
 
 override_dh_auto_test:
 	# Skip tests during build - no test suite available
+
+override_dh_fixperms:
+	dh_fixperms
+	# Make Python library files non-executable
+	chmod -x debian/nextor/usr/lib/python3/dist-packages/Nex_Tor_IP_changer/*.py 2>/dev/null || true
