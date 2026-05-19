@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python tools
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Packaging
+pkg/
+src/
+
+# Arch package artifacts
+*.pkg.tar.zst
+*.pkg.tar.xz
+
+# Secrets
+.env
+*.key
+*.pem
+
+# Temporary
+tmp/
+temp/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Git
+*.orig
