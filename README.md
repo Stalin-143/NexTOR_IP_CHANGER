@@ -59,7 +59,7 @@ For users who prefer manual installation or want to customize the tool:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Stalin-143/NexTOR_IP_CHANGER
+   git clone https://github.com/0x5t4l1n/NexTOR_IP_CHANGER
    ```
 
 2. Navigate to the project directory:
@@ -111,14 +111,14 @@ This ensures your traffic is routed through Tor with rotating IPs as configured 
 
 We welcome contributions from the community to improve NexTor IP Changer! Here’s how you can get involved:
 
-- **Bug Reports**: Found a bug? Open an issue on the [GitHub Issues page](https://github.com/Stalin-143/NexTOR_IP_CHANGER/issues) with a detailed description, including steps to reproduce and your system details.
+- **Bug Reports**: Found a bug? Open an issue on the [GitHub Issues page](https://github.com/0x5t4l1n/NexTOR_IP_CHANGER/issues) with a detailed description, including steps to reproduce and your system details.
 - **Feature Requests**: Have an idea for a new feature? Submit a feature request via GitHub Issues, explaining how it would enhance the tool.
 - **Pull Requests**: Want to contribute code? Follow these steps:
   1. Fork the repository.
   2. Create a new branch (`git checkout -b feature/your-feature-name`).
   3. Make your changes and commit them with clear messages (`git commit -m "Add your feature description"`).
   4. Push to your fork (`git push origin feature/your-feature-name`).
-  5. Open a pull request on the [GitHub repository](https://github.com/Stalin-143/NexTOR_IP_CHANGER).
+  5. Open a pull request on the [GitHub repository](https://github.com/0x5t4l1n/NexTOR_IP_CHANGER).
 - **Code Style**: Follow Python PEP 8 guidelines for code contributions. Ensure your code is well-documented and includes appropriate comments.
 - **Testing**: Test your changes thoroughly on an Arch Linux system with Tor installed to ensure compatibility.
 
@@ -138,7 +138,7 @@ If you find NexTor IP Changer useful, consider supporting its development:
 
 📬 **Contact**
 
-For questions, feedback, or support, reach out via the [GitHub Issues page](https://github.com/Stalin-143/NexTOR_IP_CHANGER/issues). You can also connect with the community through discussions on the repository.
+For questions, feedback, or support, reach out via the [GitHub Issues page](https://github.com/0x5t4l1n/NexTOR_IP_CHANGER/issues). You can also connect with the community through discussions on the repository.
 
 
 

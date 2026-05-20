@@ -35,7 +35,7 @@ NexTOR IP Changer is now a fully-packaged, production-ready Debian package suita
 | **Priority** | optional |
 | **Maintainer** | Staff <stalin@example.com> |
 | **License** | MIT |
-| **Homepage** | https://github.com/Stalin-143/NexTOR_IP_CHANGER |
+| **Homepage** | https://github.com/0x5t4l1n/NexTOR_IP_CHANGER |
 | **Installer** | /usr/bin/nextor |
 | **Built With** | debhelper 13, dh-python |
 
@@ -607,14 +607,14 @@ See [KALI_SUBMISSION.md](KALI_SUBMISSION.md) for:
 | [DEBIAN_PACKAGING.md](DEBIAN_PACKAGING.md) | Debian standards |
 | [KALI_SUBMISSION.md](KALI_SUBMISSION.md) | Kali submission |
 | [QUICK_REFERENCE.md](QUICK_REFERENCE.md) | Command cheatsheet |
-| [GitHub Repository](https://github.com/Stalin-143/NexTOR_IP_CHANGER) | Upstream source |
+| [GitHub Repository](https://github.com/0x5t4l1n/NexTOR_IP_CHANGER) | Upstream source |
 
 ---
 
 ## 📱 Support & Contact
 
 - **Package Maintainer:** Stalin <stalin@example.com>
-- **GitHub Issues:** Report bugs at https://github.com/Stalin-143/NexTOR_IP_CHANGER/issues
+- **GitHub Issues:** Report bugs at https://github.com/0x5t4l1n/NexTOR_IP_CHANGER/issues
 - **Kali Contact:** devel@kali.org (after submission)
 
 ---

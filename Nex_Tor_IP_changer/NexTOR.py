@@ -85,7 +85,7 @@ def main():
                 1.1                    
 ''')
     
-    print("\033[1;40;31m https://github.com/Stalin-143\n")
+    print("\033[1;40;31m https://github.com/0x5t4l1n\n")
     print("Nexulean")
     
     # Start Tor service

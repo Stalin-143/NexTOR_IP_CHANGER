@@ -40,9 +40,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Stalin-143/NexTOR_IP_CHANGER"
-Repository = "https://github.com/Stalin-143/NexTOR_IP_CHANGER.git"
-Issues = "https://github.com/Stalin-143/NexTOR_IP_CHANGER/issues"
+Homepage = "https://github.com/0x5t4l1n/NexTOR_IP_CHANGER"
+Repository = "https://github.com/0x5t4l1n/NexTOR_IP_CHANGER.git"
+Issues = "https://github.com/0x5t4l1n/NexTOR_IP_CHANGER/issues"
 
 [project.scripts]
 nextor = "Nex_Tor_IP_changer.NexTOR:main"

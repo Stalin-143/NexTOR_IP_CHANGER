@@ -268,4 +268,4 @@ python3 -c "import requests; print(requests.__version__)"
 - Detailed guide: [BUILD_INSTRUCTIONS.md](BUILD_INSTRUCTIONS.md)
 - Debian standards: [DEBIAN_PACKAGING.md](DEBIAN_PACKAGING.md)
 - Kali submission: [KALI_SUBMISSION.md](KALI_SUBMISSION.md)
-- GitHub repo: https://github.com/Stalin-143/NexTOR_IP_CHANGER
+- GitHub repo: https://github.com/0x5t4l1n/NexTOR_IP_CHANGER

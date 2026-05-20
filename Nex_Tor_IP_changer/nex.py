@@ -149,7 +149,7 @@ print(r'''
                                                         
                         ImprovedNexTOR 1.2                    
 ''')
-print("\033[1;40;31m https://github.com/Stalin-143\n")
+print("\033[1;40;31m https://github.com/0x5t4l1n\n")
 print("Enhanced by Nexulean")
 
 # Main program
