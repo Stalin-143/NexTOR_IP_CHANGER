@@ -22,11 +22,11 @@ except Exception:
 
 # Check if Tor is installed
 try:
-    check_tor = subprocess.check_output('which tor', shell=True)
-except subprocess.CalledProcessError:
+    check_tor = subprocess.check_output(['/usr/bin/tor', '--version'], stderr=subprocess.DEVNULL)
+except (subprocess.CalledProcessError, FileNotFoundError):
     print('[+] tor is not installed!')
-    subprocess.check_output('sudo apt update', shell=True)
-    subprocess.check_output('sudo apt install tor -y', shell=True)
+    subprocess.check_output(['/usr/bin/sudo', '/usr/bin/apt', 'update'])
+    subprocess.check_output(['/usr/bin/sudo', '/usr/bin/apt', 'install', 'tor', '-y'])
     print('[!] Tor is installed successfully')
 
 os.system("clear")

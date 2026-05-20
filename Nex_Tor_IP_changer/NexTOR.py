@@ -22,8 +22,8 @@ def check_dependencies():
         missing.append("python3-stem")
     
     try:
-        subprocess.check_output('which tor', shell=True, stderr=subprocess.DEVNULL)
-    except subprocess.CalledProcessError:
+        subprocess.check_output(['/usr/bin/tor', '--version'], stderr=subprocess.DEVNULL)
+    except (subprocess.CalledProcessError, FileNotFoundError):
         missing.append("tor")
     
     if missing:
@@ -90,7 +90,7 @@ def main():
     
     # Start Tor service
     try:
-        subprocess.check_call(['sudo', 'systemctl', 'start', 'tor'], 
+        subprocess.check_call(['/usr/bin/sudo', '/bin/systemctl', 'start', 'tor'], 
                             stdout=subprocess.DEVNULL, 
                             stderr=subprocess.DEVNULL)
     except Exception as e:
