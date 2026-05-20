@@ -14,7 +14,7 @@ setup(
     description="Automatically rotate Tor exit nodes and display updated IP address",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Stalin-143/NexTOR_IP_CHANGER",
+    url="https://github.com/0x5t4l1n/NexTOR_IP_CHANGER",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

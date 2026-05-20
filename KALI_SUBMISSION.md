@@ -88,7 +88,7 @@ kali-tools/packages/
    In `debian/control`:
    
    ```
-   Homepage: https://github.com/Stalin-143/NexTOR_IP_CHANGER
+   Homepage: https://github.com/0x5t4l1n/NexTOR_IP_CHANGER
    Vcs-Git: https://gitlab.com/kali-team/packages/nextor.git
    Vcs-Browser: https://gitlab.com/kali-team/packages/nextor
    ```
@@ -122,7 +122,7 @@ kali-tools/packages/
    Documentation:
      man nextor
    
-   Upstream: https://github.com/Stalin-143/NexTOR_IP_CHANGER
+   Upstream: https://github.com/0x5t4l1n/NexTOR_IP_CHANGER
    ```
 
 ### Compliance Checklist
@@ -333,7 +333,7 @@ man nextor
 ```
 
 ## References
-- GitHub: https://github.com/Stalin-143/NexTOR_IP_CHANGER
+- GitHub: https://github.com/0x5t4l1n/NexTOR_IP_CHANGER
 - License: MIT
 - Upstream Version: 1.1
 ```
@@ -430,7 +430,7 @@ git push -u origin update/nextor-1.2
 
 For questions about this specific package:
 - Email: stalin@example.com
-- GitHub: https://github.com/Stalin-143/
+- GitHub: https://github.com/0x5t4l1n/
 
 ## Submission Timeline Example
 
@@ -498,7 +498,7 @@ Uploaders: Stalin <stalin@example.com>
 Section: utils
 Priority: optional
 Standards-Version: 4.6.1
-Homepage: https://github.com/Stalin-143/NexTOR_IP_CHANGER
+Homepage: https://github.com/0x5t4l1n/NexTOR_IP_CHANGER
 Vcs-Git: https://gitlab.com/kali-team/packages/nextor.git
 Vcs-Browser: https://gitlab.com/kali-team/packages/nextor
 Build-Depends: debhelper-compat (= 13),

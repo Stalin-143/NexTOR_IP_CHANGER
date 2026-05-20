@@ -1,10 +1,10 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: nextor
 Upstream-Contact: Stalin <stalin@example.com>
-Source: https://github.com/Stalin-143/NexTOR_IP_CHANGER
+Source: https://github.com/0x5t4l1n/NexTOR_IP_CHANGER
 
 Files: *
-Copyright: 2024 Stalin-143
+Copyright: 2024 0x5t4l1n
 License: MIT
 
 Files: debian/*
