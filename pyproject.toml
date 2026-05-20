@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nextor"
-version = "1.1"
+version = "2.0"
 description = "Tor exit node IP address rotator for privacy and security testing"
 readme = "README.md"
 requires-python = ">=3.6"

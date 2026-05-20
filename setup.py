@@ -8,7 +8,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="nextor",
-    version="1.1",
+    version="2.0",
     author="Stalin",
     author_email="stalin@example.com",
     description="Automatically rotate Tor exit nodes and display updated IP address",

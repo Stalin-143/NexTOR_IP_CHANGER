@@ -1,5 +1,5 @@
 pkgname=nextor-ip-changer
-pkgver=1.0.0
+pkgver=2.0.0
 pkgrel=1
 pkgdesc="A tool to change TOR IP instantly using a single click"
 arch=('any')
