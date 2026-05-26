@@ -1,5 +1,8 @@
 # NexTor IP Changer v1.1.
 
+[![Self-Hosted Git](https://img.shields.io/badge/Self--Hosted-Gitea-green?style=flat-square\&logo=gitea\&logoColor=white)](https://git.w4nn4d13.tech/0x5t4l1n/NexTOR_IP_CHANGER)
+
+
 🕵️‍♂️ **Automatically Change Your IP Address Using the Tor Network**
 
 NexTor IP Changer is a lightweight, command-line tool designed to enhance online privacy by leveraging the Tor network to periodically rotate your IP address. This tool is perfect for privacy enthusiasts, security researchers, or anyone requiring dynamic IP rotation for legitimate purposes, such as testing network configurations or maintaining anonymity.
